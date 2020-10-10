@@ -13,6 +13,7 @@ int main(int argc, char* argv[]) {
 		printf("Usage: sqrt input\n\n");
 		exit(-1);
 	}
+	
 	if(isdigit(argv[1][0]))
 	{
 		int input = atoi(argv[1]);
