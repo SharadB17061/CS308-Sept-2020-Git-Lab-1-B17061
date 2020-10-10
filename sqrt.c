@@ -4,6 +4,7 @@ positive number. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <ctype.h>
 
 // LabA 1.7, add a comment
 int main(int argc, char* argv[]) {
@@ -12,9 +13,15 @@ int main(int argc, char* argv[]) {
 		printf("Usage: sqrt input\n\n");
 		exit(-1);
 	}
-
-	int input = atoi(argv[1]);
-	printf("Sqrt of %d is %f\n",input,sqrt(input));
+	if(isdigit(argv[1][0]))
+	{
+		int input = atoi(argv[1]);
+		printf("Sqrt of %d is %f\n",input,sqrt(input));
+	}
+	else
+	{
+		printf("Not A Number\n");
+	}
 	printf("End of program. Exiting.\n");
 	return(0);
 
