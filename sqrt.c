@@ -10,7 +10,7 @@ positive number. */
 int main(int argc, char* argv[]) {
 	
 	if (argc != 2) {
-		printf("DEBUG: Usage: sqrt input\n\n");
+		printf("Usage: sqrt input\n\n");
 		exit(-1);
 	}
 
@@ -18,17 +18,18 @@ int main(int argc, char* argv[]) {
 	if(input < 0)
 	{
 		input = (-1) * input;
-		printf("DEBUG: Sqrt of -%d is %fi\n",input,sqrt(input));
+
+		printf("Sqrt of -%d is %fi\n",input,sqrt(input));
 	}
 	else if(isdigit(argv[1][0]))
 	{
-		printf("DEBUG: Sqrt of %d is %f\n",input,sqrt(input));
+		printf("Sqrt of %d is %f\n",input,sqrt(input));
 	}
 	else
 	{
-		printf("DEBUG: Not A Number\n");
+		printf("Not A Number\n");
 	}
-	printf("DEBUG: End of program. Exiting.\n");
+	printf("End of program. Exiting.\n");
 	return(0);
 
 } // end main
