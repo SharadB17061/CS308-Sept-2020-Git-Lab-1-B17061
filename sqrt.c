@@ -13,9 +13,14 @@ int main(int argc, char* argv[]) {
 		printf("Usage: sqrt input\n\n");
 		exit(-1);
 	}
-	if(isdigit(argv[1][0]))
+	int input = atoi(argv[1]);
+	if(input < 0)
 	{
-		int input = atoi(argv[1]);
+		input = (-1) * input;
+		printf("Sqrt of -%d is %fi\n",input,sqrt(input));
+	}
+	else if(isdigit(argv[1][0]))
+	{
 		printf("Sqrt of %d is %f\n",input,sqrt(input));
 	}
 	else
